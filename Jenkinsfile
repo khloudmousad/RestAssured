@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         jdk 'jdk-17'         // Must match the name of JDK configured in Jenkins
-        maven 'maven-3.9.11'  // Must match Maven tool configured in Jenkins
+        maven 'maven-3.9.11' // Must match Maven tool configured in Jenkins
     }
 
     stages {
@@ -19,18 +19,17 @@ pipeline {
             }
         }
 
-         stage('Run Class 1') {
-                   steps {
-                       bat 'mvn exec:java -Dexec.mainClass="compare_xml_data_to_excel_DATA.CompareExcelToXml"'
-                   }
-               }
+        stage('Run Class 1') {
+            steps {
+                bat 'mvn exec:java -Dexec.mainClass="compare_xml_data_to_excel_DATA.CompareExcelToXml"'
+            }
+        }
 
-               stage('Run Class 2') {
-                   steps {
-                       sh 'mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.get_post_assert_data_with_rest_assured"'
-                   }
-               }
-           }
+        stage('Run Class 2') {
+            steps {
+                bat 'mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.get_post_assert_data_with_rest_assured"'
+            }
+        }
     }
 
     post {
