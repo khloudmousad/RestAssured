@@ -8,8 +8,9 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class test_restAssure {
 
+    public static void test_response_time() {
 
-    public void test_response_time() {
+
 
         // Sample XML URL
         Response response = RestAssured
@@ -23,7 +24,7 @@ public class test_restAssure {
         System.out.println("Response:\n" + response.asString());
     }
 
-    public void name_of_first_item_menu() {
+    public static void name_of_first_item_menu() {
 
         // Sample XML URL
         Response response = RestAssured
@@ -36,7 +37,7 @@ public class test_restAssure {
 
     }
 
-    public void second_item_setails_menu() {
+    public static void second_item_setails_menu() {
 
         // Sample XML URL
         Response response = RestAssured
@@ -54,7 +55,7 @@ public class test_restAssure {
     }
 
 
-    public void post_on_website(){
+    public static void post_on_website(){
         String xml = "<user><name>Kholoud</name><role>Tester</role></user>";
 
         RestAssured
@@ -66,6 +67,14 @@ public class test_restAssure {
                 .then()
                 .statusCode(200); // Webhook.site often responds with 200
     }
+
+    public static void main(String[] args){
+        test_response_time();
+        post_on_website();
+        second_item_setails_menu();
+        name_of_first_item_menu();
+    }
+
 }
 
 
