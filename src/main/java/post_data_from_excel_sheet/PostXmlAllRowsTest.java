@@ -1,13 +1,13 @@
 package post_data_from_excel_sheet;
 
 import io.restassured.RestAssured;
-import org.testng.annotations.Test;
+
 
 import java.util.List;
 
 public class PostXmlAllRowsTest {
 
-    @Test
+
     public void sendAllRowsToWebhook() {
         // ✅ Step 1: Read all rows from Excel
         List<String[]> allData = ExcelUtils.getAllData("src/main/resources/testdata.xlsx");
