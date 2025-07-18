@@ -21,7 +21,7 @@ pipeline {
 
         stage('Run Java Main') {
             steps {
-                sh 'mvn exec:java'
+               bat 'mvn exec:java'
             }
         }
     }
