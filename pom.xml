@@ -44,7 +44,6 @@
                 <version>3.1.0</version>
                 <configuration>
                     <mainClass>compare_xml_data_to_excel_DATA.CompareExcelToXml</mainClass>
-                    <mainClass>get_post_assert_data_with_rest_assured.test_response_time()</mainClass>
                 </configuration>
             </plugin>
         </plugins>
