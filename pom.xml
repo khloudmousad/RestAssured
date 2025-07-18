@@ -42,16 +42,8 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <mainClass>compare_xml_data_to_excel_DATA.CompareExcelToXml</mainClass>
-                    <classpathScope>test</classpathScope> <!-- Important -->
                 </configuration>
             </plugin>
         </plugins>
