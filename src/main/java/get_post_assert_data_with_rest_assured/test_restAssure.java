@@ -3,13 +3,12 @@ package get_post_assert_data_with_rest_assured;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-import org.testng.annotations.Test;
 
 import static org.hamcrest.Matchers.equalTo;
 
 public class test_restAssure {
 
-    @Test
+
     public void test_response_time() {
 
         // Sample XML URL
@@ -23,7 +22,7 @@ public class test_restAssure {
 
         System.out.println("Response:\n" + response.asString());
     }
-    @Test
+
     public void name_of_first_item_menu() {
 
         // Sample XML URL
@@ -36,7 +35,7 @@ public class test_restAssure {
                 .response();
 
     }
-    @Test
+
     public void second_item_setails_menu() {
 
         // Sample XML URL
@@ -54,7 +53,7 @@ public class test_restAssure {
 
     }
 
-    @Test
+
     public void post_on_website(){
         String xml = "<user><name>Kholoud</name><role>Tester</role></user>";
 
