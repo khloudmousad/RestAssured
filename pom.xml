@@ -8,13 +8,29 @@
     <artifactId>RestAssured</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
-        <!-- Rest Assured -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>5.4.0</version>
-            <scope>test</scope>
-        </dependency>
+      <dependencies>
+    <!-- ✅ Add this -->
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>5.4.0</version>
+    </dependency>
+
+    <!-- If you’re using XML parsing -->
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>xml-path</artifactId>
+        <version>5.4.0</version>
+    </dependency>
+
+    <!-- Apache POI for Excel -->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.2.3</version>
+    </dependency>
+</dependencies>
+
 
         <!-- TestNG or JUnit (choose one) -->
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -25,37 +41,14 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- XML path support -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>xml-path</artifactId>
-            <version>5.4.0</version>
-            <scope>test</scope>
-        </dependency>
 
-            <!-- Apache POI for Excel -->
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi</artifactId>
-                <version>5.2.5</version>
-            </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>5.2.5</version>
             </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
+        
+        
 
 
     </dependencies>
