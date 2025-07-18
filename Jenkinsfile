@@ -19,11 +19,18 @@ pipeline {
             }
         }
 
-        stage('Run Java Main') {
-            steps {
-               bat 'mvn exec:java'
-            }
-        }
+         stage('Run Class 1') {
+                   steps {
+                       bat 'mvn exec:java -Dexec.mainClass="compare_xml_data_to_excel_DATA.CompareExcelToXml"'
+                   }
+               }
+
+               stage('Run Class 2') {
+                   steps {
+                       sh 'mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.get_post_assert_data_with_rest_assured"'
+                   }
+               }
+           }
     }
 
     post {
