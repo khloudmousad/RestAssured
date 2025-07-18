@@ -27,7 +27,7 @@ pipeline {
 
         stage('Run Class 2') {
             steps {
-                bat 'mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.get_post_assert_data_with_rest_assured"'
+                bat 'mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.test_restAssure"'
             }
         }
     }
