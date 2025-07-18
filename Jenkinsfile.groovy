@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/khloudmousad/RestAssured/blob/master/src/test/java/compare_xml_data_to_excel_DATA/CompareExcelToXml.java'
+                git 'https://github.com/khloudmousad/RestAssured.git'
             }
         }
 
