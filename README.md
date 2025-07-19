@@ -22,6 +22,7 @@ RestAssured/
 ├── Jenkinsfile
 └── pom.xml
 ✅ Features
+
 Data-driven API Testing with data pulled from Excel (.xlsx) using Apache POI
 
 REST API Tests using RestAssured
@@ -31,6 +32,8 @@ Live Webhook Posting: XML data sent to Webhook.site
 Jenkins Pipeline: End-to-end CI/CD with automated Maven build and multi-step testing stages
 
 Detailed Console Logging: Each execution phase is clearly logged with emoji markers for readability
+
+
 
 ⚙️ Technologies Used
 Java 17
@@ -111,33 +114,26 @@ Maven tool configuration (e.g., maven-3.9.11)
 JDK configured (e.g., jdk-17)
 
 🚀 How to Run Locally
+
 Clone the repo:
-
-bash
-Copy
-Edit
 git clone https://github.com/khloudmousad/RestAssured.git
-Compile:
 
-bash
-Copy
-Edit
+
+Compile:
 mvn clean compile
 Run individual classes:
 
-bash
-Copy
-Edit
+
 mvn exec:java -Dexec.mainClass="compare_xml_data_to_excel_DATA.CompareExcelToXml"
 mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.test_restAssure"
 mvn exec:java -Dexec.mainClass="post_data_from_excel_sheet.PostXmlAllRowsTest"
+
+
 📽️ Watch the Demo
 📹 Video shows:
 
 Maven build
-
 GitHub commit
-
 Jenkins pipeline trigger
 Multi-step test execution
 
