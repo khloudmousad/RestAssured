@@ -123,18 +123,17 @@ Compile:
 mvn clean compile
 Run individual classes:
 
-
-mvn exec:java -Dexec.mainClass="compare_xml_data_to_excel_DATA.CompareExcelToXml"
-mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.test_restAssure"
-mvn exec:java -Dexec.mainClass="post_data_from_excel_sheet.PostXmlAllRowsTest"
+.mvn exec:java -Dexec.mainClass="compare_xml_data_to_excel_DATA.CompareExcelToXml"
+.mvn exec:java -Dexec.mainClass="get_post_assert_data_with_rest_assured.test_restAssure"
+.mvn exec:java -Dexec.mainClass="post_data_from_excel_sheet.PostXmlAllRowsTest"
 
 
 📽️ Watch the Demo
 📹 Video shows:
 
-Maven build
-GitHub commit
-Jenkins pipeline trigger
+Maven build/
+GitHub commit/
+Jenkins pipeline trigger/
 Multi-step test execution
 
 https://github.com/user-attachments/assets/9b5be5ab-5124-45f8-b58a-03b4e897dbd0
