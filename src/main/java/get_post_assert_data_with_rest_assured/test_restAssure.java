@@ -11,6 +11,7 @@ public class test_restAssure {
         System.out.println("🕒 [TEST] Running: test_response_time");
 
         Response response = RestAssured
+                .given()
                 .get("https://www.w3schools.com/xml/simple.xml")
                 .then()
                 .assertThat()
