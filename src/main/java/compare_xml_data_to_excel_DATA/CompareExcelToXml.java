@@ -13,35 +13,32 @@ public class CompareExcelToXml {
 
     public static void main(String[] args) throws Exception {
 
-        // 🔧 Formatter to safely read any cell as a string (numeric, text, date, etc.)
+        System.out.println("📁 [PHASE 1] Reading Excel data...");
         DataFormatter formatter = new DataFormatter();
 
-        // 1️⃣ Read expected data from Excel
         List<Map<String, String>> expectedData = new ArrayList<>();
         FileInputStream fis = new FileInputStream("src/main/resources/testdata2.xlsx");
         Workbook workbook = WorkbookFactory.create(fis);
         Sheet sheet = workbook.getSheetAt(0);
 
         int lastRow = sheet.getLastRowNum();
-        for (int i = 1; i <= lastRow; i++) { // start at 1 to skip header
+        for (int i = 1; i <= lastRow; i++) {
             Row row = sheet.getRow(i);
             if (row == null) continue;
 
-            // ✅ Use DataFormatter to avoid cell type exceptions
             String name = formatter.formatCellValue(row.getCell(0));
             String price = formatter.formatCellValue(row.getCell(1));
 
             Map<String, String> rowMap = new HashMap<>();
             rowMap.put("name", name.trim());
             rowMap.put("price", price.trim());
-
             expectedData.add(rowMap);
         }
-
         workbook.close();
         fis.close();
+        System.out.println("✅ Finished reading Excel. Rows found: " + expectedData.size());
 
-        // 2️⃣ Fetch actual data from XML (W3Schools breakfast menu)
+        System.out.println("🌐 [PHASE 2] Fetching XML from API...");
         String url = "https://www.w3schools.com/xml/simple.xml";
 
         Response response = RestAssured
@@ -53,13 +50,11 @@ public class CompareExcelToXml {
                 .extract().response();
 
         XmlPath xmlPath = new XmlPath(response.asString());
-
         List<String> actualNames = xmlPath.getList("breakfast_menu.food.name");
         List<String> actualPrices = xmlPath.getList("breakfast_menu.food.price");
+        System.out.println("✅ Received XML data with " + actualNames.size() + " food items.");
 
-        System.out.println("✅ Starting comparison...\n");
-
-        // 3️⃣ Compare each Excel row with the XML data
+        System.out.println("🧪 [PHASE 3] Comparing Excel vs XML data...");
         for (Map<String, String> expected : expectedData) {
             String expectedName = expected.get("name");
             String expectedPrice = expected.get("price");
@@ -85,6 +80,6 @@ public class CompareExcelToXml {
             }
         }
 
-        System.out.println("\n🎉 All Excel items matched with XML!");
+        System.out.println("\n🎉 [PHASE 4] SUCCESS: All Excel items matched with XML!");
     }
 }
