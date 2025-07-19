@@ -1,9 +1,7 @@
 This project demonstrates automated API testing using RestAssured, dynamic test data from Excel sheets, and full CI/CD integration with Jenkins and GitHub. The project contains multiple Java classes showcasing REST API GET/POST testing, data-driven testing, and XML content validation.
 
 📋 Project Structure
-css
-Copy
-Edit
+
 RestAssured/
 ├── src/
 │   └── main/
@@ -21,6 +19,8 @@ RestAssured/
 │
 ├── Jenkinsfile
 └── pom.xml
+
+
 ✅ Features
 
 Data-driven API Testing with data pulled from Excel (.xlsx) using Apache POI
