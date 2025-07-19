@@ -4,8 +4,10 @@ import io.restassured.RestAssured;
 import java.util.List;
 
 public class PostXmlAllRowsTest {
-
-    public void sendAllRowsToWebhook() {
+    public static void main(String[] args) {
+        sendAllRowsToWebhook();
+    }
+    public static void sendAllRowsToWebhook() {
         System.out.println("🚀 Starting method: sendAllRowsToWebhook");
 
         // ✅ Step 1: Read all rows from Excel
