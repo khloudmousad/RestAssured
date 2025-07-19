@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('open git RestAssured project') {
             steps {
                 git 'https://github.com/khloudmousad/RestAssured'
             }
